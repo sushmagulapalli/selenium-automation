@@ -9,10 +9,11 @@ public class FirstTest {
     public static void main(String[] args) {
 //        System.setProperty("webdriver.gecko.driver","/Users/Rakesh_Budugu/softwares/geckodriver.exe");
 //        WebDriver driver=new FirefoxDriver();
+//        System.setProperty("webdriver.chrome.driver","/Users/Rakesh_Budugu/softwares/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
         driver.get("http://demo.guru99.com/test/newtours");
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.findElement(By.name("userName")).sendKeys("mercury");
         driver.findElement(By.name("password")).sendKeys("mercury");
         driver.findElement(By.name("submit")).click();

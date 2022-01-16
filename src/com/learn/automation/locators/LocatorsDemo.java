@@ -13,11 +13,13 @@ public class LocatorsDemo {
         //id & name locators
         WebElement searchbox= driver.findElement(By.id("search_query_top"));
         searchbox.sendKeys("T-shirts");
+
        driver.findElement(By.name("submit_search")).click();
 
-       //Link text & Partial Link Text
+       //Link text & Partial Link Text - only used along with elements with anchor tag (<a></a>)
         driver.findElement(By.linkText("Printed Chiffon Dress")).click();
-        //driver.findElement(By.partialLinkText("Chiffon Dress")).click();
+        driver.findElement(By.partialLinkText("Chiffon Dress")).click();
+
 
 
 

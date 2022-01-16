@@ -12,6 +12,7 @@ public class MousehoverTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/hovers");
 
+
         //check if the text is present before hovering over the image - should be false
         boolean displayed = driver.findElement(By.xpath("//h5[contains(text(),'name: user1')]")).isDisplayed();
         System.out.println("Before mouse hover: " + displayed);

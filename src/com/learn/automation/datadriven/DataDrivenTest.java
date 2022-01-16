@@ -1,7 +1,6 @@
 package com.learn.automation.datadriven;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -11,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -62,6 +60,9 @@ public class DataDrivenTest {
             WebElement element = driver.findElement(By.xpath("//select[@id='tenurePeriod']"));
             Select tenureListBox = new Select(element);
             tenureListBox.selectByVisibleText(tenure);
+//            tenureListBox.getOptions();
+//            tenureListBox.selectByIndex(0);
+//            tenureListBox.selectByValue("365");
 
             WebElement element1 = driver.findElement(By.xpath("//select[@id='frequency']"));
             Select frequencyListBox = new Select(element1);

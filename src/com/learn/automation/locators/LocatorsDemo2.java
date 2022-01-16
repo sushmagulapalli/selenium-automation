@@ -2,7 +2,10 @@ package com.learn.automation.locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class LocatorsDemo2 {
     public static void main(String[] args) {
@@ -13,7 +16,9 @@ public class LocatorsDemo2 {
         driver.manage().window().maximize(); // maximize web page
 
         //className
+//        List<WebElement> elements = driver.findElements(By.className("homeslider-container"));
         int sliders=driver.findElements(By.className("homeslider-container")).size();
+//        elements.size();
         System.out.println(sliders);
 
         //TagName

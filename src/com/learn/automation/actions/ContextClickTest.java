@@ -21,8 +21,9 @@ public class ContextClickTest {
         Alert alert = driver.switchTo().alert();
         String text = alert.getText();
         System.out.println(text);
-
         alert.accept();
+        driver.switchTo().defaultContent();
+
         driver.quit();
     }
 }

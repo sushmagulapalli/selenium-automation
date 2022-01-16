@@ -9,16 +9,11 @@ public class HeadlessChromeTest {
 
         ChromeOptions options=new ChromeOptions();
         options.setHeadless(true);
+
         WebDriver driver=new ChromeDriver(options);
         driver.get("https://www.facebook.com/");
         System.out.println(driver.getTitle());
 
         driver.quit();
-
-
-
-
-
-
     }
 }
